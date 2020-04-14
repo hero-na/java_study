@@ -4,10 +4,35 @@ public class Person {
     private int cashAmount;
     private BankAccount account;
 
-    public void setAge(int newAge){
-        if(newAge >= 0){
-            this.age = newAge;
+
+    public Person (String name, int age){
+        this.name = name;
+        if (age < 0 ){
+            this.age=0;
+        }else{
+            this.age = age;
         }
+        this.cashAmount = 0;
+    }
+
+    public Person(String name, int age, int cashAmount) {
+        this.name = name;
+        if (age < 0) {
+            this.age = 0;
+        } else {
+            this.age = age;
+        }
+
+        if (cashAmount < 0) {
+            this.cashAmount = 12;
+        } else {
+            this.cashAmount = cashAmount;
+        }
+
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public int getAge() {

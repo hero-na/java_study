@@ -2,6 +2,27 @@ public class BankAccount {
     private int balance;
     private Person owner;
 
+    public BankAccount(int balance) {
+        if(balance < 0){
+            this.balance=0;
+        }else {
+            this.balance = balance;
+        }
+    }
+
+    public BankAccount(Person pOwner) {
+        this.owner = pOwner;
+        this.balance=0;
+    }
+    public BankAccount(int pBalance, Person pOwner) {
+        if (pBalance < 0) {
+            this.balance = 0;
+        } else {
+            this.balance = pBalance;
+        }
+        this.owner = pOwner;
+    }
+
     public void setBalance(int newBalance){
         balance = newBalance;
     }
